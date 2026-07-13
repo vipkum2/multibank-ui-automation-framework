@@ -16,7 +16,7 @@ class LoginPage {
     cy.get('form').should('be.visible');
 }
 
-  clickLogo() {
+  navigateToMarketingSite() {
     cy.get(SELECTORS.logo).click();
   }
 }

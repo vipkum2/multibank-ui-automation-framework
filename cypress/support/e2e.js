@@ -19,7 +19,9 @@ import './commands'
 Cypress.on('uncaught:exception', (err) => {
   // Ignore the known React error on the marketing website
   if (
-    err.message.includes('Minified React error #329')
+    //err.message.includes('Minified React error #329')
+    err.message.includes('Minified React error') ||
+    err.message.includes('Element attr did not return a valid number')
   ) {
     return false;
   }

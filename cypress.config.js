@@ -24,5 +24,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return config;
     },
+
+    env: {
+      marketingSiteUrl: "https://mb.io",
+      loginPageUrl: "https://trade.mb.io"
+    }
   },
 });
