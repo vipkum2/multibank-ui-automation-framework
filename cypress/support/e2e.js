@@ -15,3 +15,14 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+Cypress.on('uncaught:exception', (err) => {
+  // Ignore the known React error on the marketing website
+  if (
+    err.message.includes('Minified React error #329')
+  ) {
+    return false;
+  }
+  // Let all other exceptions fail the test
+  return true;
+});
