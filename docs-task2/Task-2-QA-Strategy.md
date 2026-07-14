@@ -10,27 +10,27 @@ A fintech startup is preparing to launch its first public mobile trading applica
 
 My first priority would be understanding the product before writing a single test.
 
-I would begin by:
+I would begin by pritorizing below:
 
-- Understanding the business-critical user journeys.
+- Understanding the business-critical user journeys. Who is the end user and how user is going to our product ?
 - Identifying high-risk features involving user funds.
 - Reviewing product requirements and available documentation.
-- Meeting with Product Managers and Developers to understand expected behaviour.
-- Installing the application on both iOS and Android.
-- Exploring the application manually to identify obvious issues.
+- Talk with Product Managers and Developers to understand expected behaviour.
+- Installing the app on both iOS and Android.
+- HIT and TRY: Exploring the app manually to identify obvious issues.
 - Creating a risk-based testing strategy.
 
-Since release is only two weeks away, I would focus on validating the highest business risks rather than attempting complete coverage.
+Since release is only two weeks away, I would focus on priotizing validating the highest business risks rather than attempting complete coverage.
 
 ---
 
 # 2. How would you approach testing this app?
 
-I would use a layered testing approach.
+I would use a layered testing approach. I will also note that we required cross platforms like iOS, Android to test.
 
 ## Smoke Testing
 
-Validate that the application launches correctly and core functionality is available.
+I will try to validate that the application launches correctly and core functionality is available.
 
 ## Functional Testing
 
@@ -69,13 +69,13 @@ across multiple devices and screen sizes.
 
 ## Regression Testing
 
-Build a lightweight regression suite covering all critical business flows.
+I will try to build a lightweight regression suite covering all critical business flows.
 
 ---
 
 # 3. What does QA look like inside a sprint?
 
-QA should be involved throughout the entire sprint.
+QA should be involved throughout the entire sprint. It is like when Sprint planning starts, QA should be participated from first point.
 
 ### During Backlog Refinement
 
@@ -115,9 +115,11 @@ A regression suite should be:
 - Fast
 - Stable
 - Independent
-- High value
+- must contains repetative tests/features
+- mostly cover stable features that associated with buisness
+- Also require to sunset the tests that are not adding any values
 
-It should complete within approximately 30–45 minutes and cover the application's most critical user journeys.
+It should complete within accepted time frame and cover the application's most critical user journeys.
 
 Example coverage:
 
@@ -134,24 +136,22 @@ Example coverage:
 - Notifications
 - Logout
 
-Lower-risk UI validations would be executed separately to keep the regression suite efficient.
+Lower-risk UI validations can be executed separately to keep the regression suite efficient.
 
 ---
 
 # 5. What would keep you up at night before public release?
 
-Since the application manages real user funds, my biggest concerns would be:
+This is trick question. As we do not have any QA doc before starting and limited time. QA might executed all above scenarios that can give release confidence, but the application manages real user funds, my biggest concerns would be:
 
-- Incorrect trade execution
-- Incorrect account balances
+- Incorrect trade execution, account balances
 - Deposit or withdrawal failures
 - Duplicate transactions
 - Security vulnerabilities
 - Authentication failures
-- Session management issues
 - API instability
 - Production environment configuration
-- Performance degradation during high market volatility
+- Performance de-gradation during high market volatility
 
 Even small defects in these areas could result in financial loss and significant reputational damage.
 
