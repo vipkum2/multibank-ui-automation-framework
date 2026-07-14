@@ -137,11 +137,12 @@ npm install
 
 ## Running Tests
 
-Execute the complete regression suite:
+Run the complete automation suite with a single command:
 
 ```bash
 npm test
 ```
+This command executes the full regression suite and generates Mochawesome HTML and JSON reports.
 
 Open Cypress Test Runner:
 
