@@ -55,7 +55,8 @@ multibank-ui-automation-framework
 │   ├── support
 │   └── downloads
 │
-├── docs/
+├── docs-task2
+|   ├── images
 │   ├── Task-2-QA-Strategy.md
 │   ├── Test-Plan.md
 │   ├── Release-Readiness-Checklist.md
@@ -182,6 +183,25 @@ npm run test:firefox
 
 ---
 
+## Cross-Browser Execution Evidence
+
+The framework supports execution across multiple browsers. Sample successful executions are shown below.
+
+| Browser  | Status    |
+| -------- | --------- |
+| Chrome   | ✅ Passed |
+| Electron | ✅ Passed |
+
+### Chrome
+
+![Chrome Test Run](docs-task2/images/navigation_run_on_chrome.png)
+
+### Electron
+
+![Electron Test Run](docs-task2/images/navigation_run_on_electron.png)
+
+---
+
 ## Test Reports
 
 The framework generates Mochawesome HTML and JSON reports automatically after execution.
@@ -194,7 +214,7 @@ reports/
 └── json/
 ```
 
-A sample HTML execution report is included in the repository:
+A sample Mochawesome HTML report is included in the repository:
 
 ```text
 reports/html/index.html
@@ -226,7 +246,7 @@ The workflow automatically:
 - Executes the complete Cypress test suite
 - Uploads the Mochawesome execution report as a workflow artifact
 
-A successful workflow execution is available in the repository's **Actions** tab.
+Sample successful workflow executions are available under the repository's **Actions** tab.
 
 ---
 
@@ -261,18 +281,19 @@ A successful workflow execution is available in the repository's **Actions** tab
 
 ## Additional Documentation : Task 2
 
-The repository also includes supporting QA documentation for **Task 2** under the `docs/` directory.
+The repository also includes supporting QA documentation for **Task 2** under the `docs-task2/` directory.
 
-| Document | Description |
-|----------|-------------|
-| `Task-2-QA-Strategy.md` | Written responses covering the QA strategy and testing approach |
-| `Test-Plan.md` | Overall testing scope, objectives, and execution strategy |
-| `Release-Readiness-Checklist.md` | Checklist used to assess release readiness |
-| `Risk-Matrix.md` | Risk assessment with probability, impact, and mitigation |
+| Document                           | Description                                                     |
+| ---------------------------------- | --------------------------------------------------------------- |
+| `Task-2-QA-Strategy.md`          | Written responses covering the QA strategy and testing approach |
+| `Test-Plan.md`                   | Overall testing scope, objectives, and execution strategy       |
+| `Release-Readiness-Checklist.md` | Checklist used to assess release readiness                      |
+| `Risk-Matrix.md`                 | Risk assessment with probability, impact, and mitigation        |
 
 ---
 
 ## Author
 
 **Vipin Kumar**
+
 I used AI assistance for brainstorming, code review, and documentation. All implementation decisions, validation, and final review were performed by me.
