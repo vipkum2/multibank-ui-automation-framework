@@ -1,8 +1,10 @@
 # MultiBank UI Automation Framework
 
-Production-grade UI automation framework built using **Cypress** for the MultiBank QA Automation Assessment.
+![GitHub Actions](https://github.com/vipkum2/multibank-ui-automation-framework/actions/workflows/cypress.yml/badge.svg)
 
-The framework validates critical user journeys of the MultiBank marketing platform while demonstrating scalable architecture, maintainability, and industry best practices.
+Scalable UI automation framework built using **Cypress** for the **MultiBank QA Automation Assessment**.
+
+The framework validates core user journeys of the MultiBank marketing platform while demonstrating clean architecture, maintainability, and industry best practices.
 
 ---
 
@@ -12,7 +14,8 @@ The framework validates critical user journeys of the MultiBank marketing platfo
 - JavaScript (ES6)
 - Node.js
 - Page Object Model (POM)
-- GitHub
+- GitHub Actions
+- Mochawesome Reporting
 
 ---
 
@@ -22,9 +25,10 @@ The framework validates critical user journeys of the MultiBank marketing platfo
 - Reusable page components and utilities
 - Environment-based configuration
 - Independent and deterministic test cases
-- Parameterized test data where applicable
-- Cross-browser execution support
+- Cross-browser execution support (Chrome, Microsoft Edge, Firefox)
 - Negative and edge-case validation
+- HTML & JSON execution reports
+- GitHub Actions CI integration
 - Easy to maintain and extend
 
 ---
@@ -32,7 +36,11 @@ The framework validates critical user journeys of the MultiBank marketing platfo
 ## Project Structure
 
 ```text
-mb-qa-framework
+multibank-ui-automation-framework
+│
+├── .github
+│   └── workflows
+│       └── cypress.yml
 │
 ├── cypress
 │   ├── e2e
@@ -53,36 +61,37 @@ mb-qa-framework
 │
 ├── cypress.config.js
 ├── package.json
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 ## Test Coverage
 
-### Navigation & Layout
+### 1. Navigation & Layout
 
 - Verify top navigation renders correctly
 - Verify navigation links redirect to expected destinations
 - Verify desktop navigation layout
 
-### Trading Functionality
+### 2. Trading Functionality
 
 - Verify Spot Market section
 - Verify trading pair categories
 - Verify trading pair data structure
 - Verify navigation to trading pair detail pages
 
-### Content & Links
+### 3. Content & Links
 
 - Verify marketing banner
-- Verify App Store and Google Play download links
+- Verify App Store download link
 - Verify Company page hero section
 - Verify statistics section
 - Verify trust features
 - Verify community section
 
-### Negative & Edge Cases
+### 4. Negative & Edge Cases
 
 - Invalid route handling
 - Broken navigation link detection
@@ -94,7 +103,6 @@ mb-qa-framework
 
 - Node.js 18+
 - npm
-- Google Chrome (recommended)
 
 ---
 
@@ -109,7 +117,7 @@ git clone https://github.com/vipkum2/multibank-ui-automation-framework.git
 Navigate to the project:
 
 ```bash
-cd mb-qa-framework
+cd multibank-ui-automation-framework
 ```
 
 Install dependencies:
@@ -122,7 +130,7 @@ npm install
 
 ## Running Tests
 
-Run the complete regression suite with single command and it generate the report also:
+Execute the complete regression suite:
 
 ```bash
 npm test
@@ -134,7 +142,7 @@ Open Cypress Test Runner:
 npm run cy:open
 ```
 
-Execute individual suites:
+Execute individual test suites:
 
 ```bash
 npm run test:smoke
@@ -148,19 +156,19 @@ npm run test:negative
 
 ## Cross-Browser Execution
 
-Run tests in Chrome:
+Run the framework on Chrome:
 
 ```bash
 npm run test:chrome
 ```
 
-Run tests in Microsoft Edge:
+Run the framework on Microsoft Edge:
 
 ```bash
 npm run test:edge
 ```
 
-Run tests in Firefox:
+Run the framework on Firefox:
 
 ```bash
 npm run test:firefox
@@ -170,46 +178,81 @@ npm run test:firefox
 
 ## Test Reports
 
-HTML and JSON execution reports are generated under:
-One sample HTTP report: `reports/html/index.html`
+The framework generates Mochawesome HTML and JSON reports automatically after execution.
+
+Report structure:
+
 ```text
 reports/
 ├── html/
 └── json/
 ```
 
+A sample HTML execution report is included in the repository:
+
+```text
+reports/html/index.html
+```
+
+---
+
+## Continuous Integration
+
+A GitHub Actions workflow is included to automate test execution.
+
+### Workflow Triggers
+
+- Push to the `main` branch
+- Pull requests targeting the `main` branch
+- Manual execution using **Run workflow**
+
+Workflow location:
+
+```text
+.github/workflows/cypress.yml
+```
+
+The workflow automatically:
+
+- Checks out the repository
+- Sets up the Node.js environment
+- Installs project dependencies
+- Executes the complete Cypress test suite
+- Uploads the Mochawesome execution report as a workflow artifact
+
+A successful workflow execution is available in the repository's **Actions** tab.
+
 ---
 
 ## Framework Design Decisions
 
-- Implemented using the Page Object Model to separate test logic from UI interaction.
-- Reusable methods and centralized selectors improve maintainability.
+- Implemented using the Page Object Model to separate UI interaction from test logic.
+- Reusable page methods and centralized selectors improve maintainability.
 - Tests are independent and deterministic to support reliable execution.
-- Navigation validation is parameterized to simplify future additions.
 - Assertions focus on business functionality rather than implementation details.
+- Test suites are organized by functional area to simplify maintenance and future expansion.
 
 ---
 
 ## Assumptions
 
-- The target environment is available during execution.
-- Test accounts are managed by the application.
-- External App Store and Google Play links are validated for availability only.
+- The target environment is publicly accessible during execution.
+- External application store links are validated for successful navigation.
+- Test execution does not require authenticated trading functionality.
 
 ---
 
 ## Future Enhancements
 
-- API response validation
+- API/network response validation
 - Visual regression testing
-- GitHub Actions CI integration
 - Accessibility testing
 - Test data externalization
 - Parallel execution
+- Docker-based test execution
 
 ---
 
 ## Author
 
 **Vipin Kumar**
-
