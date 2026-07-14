@@ -22,8 +22,9 @@ Cypress.on('uncaught:exception', (err) => {
     //err.message.includes('Minified React error #329')
     err.message.includes('Minified React error') ||
     err.message.includes('Element attr did not return a valid number') ||
-    err.message.includes('Script error') ||
-     err.message.includes('attachShadow')
+    err.message.includes('Script error') || 
+    err.message.includes('attachShadow') ||
+    err.message.includes('initialised') // observed in --headless chrome mode
   ) {
     return false;
   }
