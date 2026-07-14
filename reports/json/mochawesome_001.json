@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-14T10:39:59.703Z",
+    "end": "2026-07-14T10:40:33.958Z",
+    "duration": 34255,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00a4e66a-338e-4f7d-88c5-1c57c3d49b1b",
+      "title": "",
+      "fullFile": "cypress/e2e/content/company.spec.js",
+      "file": "cypress/e2e/content/company.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "86ece913-5b09-48d4-a75f-75875464ffa8",
+          "title": "Company Page -> Why Multibank ?",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should render Why MultiBank page with expected hero content",
+              "fullTitle": "Company Page -> Why Multibank ? should render Why MultiBank page with expected hero content",
+              "timedOut": null,
+              "duration": 1611,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "companyPage.verifyHeroSection();",
+              "err": {},
+              "uuid": "5eeb2113-7242-4558-991c-125c19bf025f",
+              "parentUUID": "86ece913-5b09-48d4-a75f-75875464ffa8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display company statistics",
+              "fullTitle": "Company Page -> Why Multibank ? should display company statistics",
+              "timedOut": null,
+              "duration": 1303,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "companyPage.verifyStatistics();",
+              "err": {},
+              "uuid": "0384841b-318d-4d45-80bf-c3652ea218a3",
+              "parentUUID": "86ece913-5b09-48d4-a75f-75875464ffa8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display company core sections",
+              "fullTitle": "Company Page -> Why Multibank ? should display company core sections",
+              "timedOut": null,
+              "duration": 1522,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "companyPage.verifyCoreSections();",
+              "err": {},
+              "uuid": "84f7cada-9053-4f21-89b1-488eb53e1193",
+              "parentUUID": "86ece913-5b09-48d4-a75f-75875464ffa8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display trust features",
+              "fullTitle": "Company Page -> Why Multibank ? should display trust features",
+              "timedOut": null,
+              "duration": 1574,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "companyPage.verifyTrustFeatures();",
+              "err": {},
+              "uuid": "30fa6e89-3ac9-4bc2-b191-f7c1b392dbd0",
+              "parentUUID": "86ece913-5b09-48d4-a75f-75875464ffa8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display community section",
+              "fullTitle": "Company Page -> Why Multibank ? should display community section",
+              "timedOut": null,
+              "duration": 1604,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "companyPage.verifyCommunitySection();",
+              "err": {},
+              "uuid": "d17a396e-cf7c-4714-870f-f8ab760c157c",
+              "parentUUID": "86ece913-5b09-48d4-a75f-75875464ffa8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5eeb2113-7242-4558-991c-125c19bf025f",
+            "0384841b-318d-4d45-80bf-c3652ea218a3",
+            "84f7cada-9053-4f21-89b1-488eb53e1193",
+            "30fa6e89-3ac9-4bc2-b191-f7c1b392dbd0",
+            "d17a396e-cf7c-4714-870f-f8ab760c157c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7614,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

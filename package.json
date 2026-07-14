@@ -4,13 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run && npm run report",
+    "cy:open": "cypress open",
+    "test:smoke": "cypress run --spec cypress/e2e/authentication/login.spec.js",
+    "test:navigation": "cypress run --spec cypress/e2e/navigation/navigation.spec.js",
+    "test:trading": "cypress run --spec cypress/e2e/trading/explore.spec.js",
+    "test:content": "cypress run --spec cypress/e2e/content/company.spec.js",
+    "test:negative": "cypress run --spec cypress/e2e/negative/negative.spec.js",
+
+    "report:merge": "mochawesome-merge reports/json/*.json > reports/report.json",
+    "report:generate": "marge reports/report.json -f index -o reports/html",
+    "report": "npm run report:merge && npm run report:generate",
+
+    "test:chrome": "cypress run --browser chrome",
+    "test:edge": "cypress run --browser edge",
+    "test:firefox": "cypress run --browser firefox"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.18.1"
+    "cypress": "^15.18.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }

@@ -37,7 +37,7 @@ describe('Negative / Edge Cases', () => {
             });
 
     });
-    it.only('should render correctly on a mobile viewport', () => {
+    it('should render correctly on a mobile viewport', () => {
         cy.viewport('iphone-x');
         cy.visit(Cypress.env('marketingSiteUrl'));
 

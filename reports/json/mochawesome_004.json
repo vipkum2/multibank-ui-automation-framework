@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-14T10:41:31.403Z",
+    "end": "2026-07-14T10:41:41.101Z",
+    "duration": 9698,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "359cbdf1-fd11-4245-a8a0-0bf7c0233c99",
+      "title": "",
+      "fullFile": "cypress/e2e/negative/nagative.spec.js",
+      "file": "cypress/e2e/negative/nagative.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12cb1f03-268c-43ce-a042-cd7b7539d398",
+          "title": "Negative / Edge Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should display Page Not Found for an invalid route",
+              "fullTitle": "Negative / Edge Cases should display Page Not Found for an invalid route",
+              "timedOut": null,
+              "duration": 2500,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/this-page-does-not-exist', {\n  failOnStatusCode: false\n});\ncy.location('pathname').should('eq', '/this-page-does-not-exist');\ncy.contains('Page Not Found').should('be.visible');",
+              "err": {},
+              "uuid": "0558a842-ef59-4d09-8377-dad56e0e4436",
+              "parentUUID": "12cb1f03-268c-43ce-a042-cd7b7539d398",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify navigation links are not broken",
+              "fullTitle": "Negative / Edge Cases should verify navigation links are not broken",
+              "timedOut": null,
+              "duration": 4231,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('marketingSiteUrl'));\nINTERNAL_NAV_LINKS.forEach(link => {\n  cy.request({\n    url: `${Cypress.env('marketingSiteUrl')}${link.href}`\n    //failOnStatusCode: false\n  }).then(response => {\n    expect(response.status).to.eq(200);\n  });\n});\nEXTERNAL_NAV_LINKS.forEach(link => {\n  cy.request({\n    url: link.href\n    //failOnStatusCode: false\n  }).then(response => {\n    expect(response.status).to.be.oneOf([200, 301, 302]);\n  });\n});",
+              "err": {},
+              "uuid": "d9350fad-e7d8-40de-93be-b8265a865e7a",
+              "parentUUID": "12cb1f03-268c-43ce-a042-cd7b7539d398",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should render correctly on a mobile viewport",
+              "fullTitle": "Negative / Edge Cases should render correctly on a mobile viewport",
+              "timedOut": null,
+              "duration": 1742,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-x');\ncy.visit(Cypress.env('marketingSiteUrl'));\nmarketingHomePage.verifyLoaded();\nmarketingHomePage.verifyMobileMenu();\nmarketingHomePage.verifyMobileLayout();",
+              "err": {},
+              "uuid": "9b464675-8c56-4b35-abd9-1474ebda3fc1",
+              "parentUUID": "12cb1f03-268c-43ce-a042-cd7b7539d398",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0558a842-ef59-4d09-8377-dad56e0e4436",
+            "d9350fad-e7d8-40de-93be-b8265a865e7a",
+            "9b464675-8c56-4b35-abd9-1474ebda3fc1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8473,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

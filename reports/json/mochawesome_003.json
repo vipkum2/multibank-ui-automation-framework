@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-14T10:40:51.202Z",
+    "end": "2026-07-14T10:41:30.451Z",
+    "duration": 39249,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aeba86ce-b11f-4b20-9f1b-fd5c65a3c88f",
+      "title": "",
+      "fullFile": "cypress/e2e/trading/explore.spec.js",
+      "file": "cypress/e2e/trading/explore.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+          "title": "Explore Market",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should render Spot Market section with trading pairs",
+              "fullTitle": "Explore Market should render Spot Market section with trading pairs",
+              "timedOut": null,
+              "duration": 2435,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.verifyPageLoaded();\nexplorePage.verifyMarketTableVisible();\nexplorePage.verifyTradingPairsExist();",
+              "err": {},
+              "uuid": "ffc1960c-ea6f-474b-bf1c-c6b203df0abe",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display trading pairs for Hot",
+              "fullTitle": "Explore Market should display trading pairs for Hot",
+              "timedOut": null,
+              "duration": 1815,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.selectMarketCategory(category);\nexplorePage.verifyTradingPairsExist();",
+              "err": {},
+              "uuid": "89a6f9a0-f726-40ee-9b8e-66d249c07624",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display trading pairs for Gainers",
+              "fullTitle": "Explore Market should display trading pairs for Gainers",
+              "timedOut": null,
+              "duration": 1726,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.selectMarketCategory(category);\nexplorePage.verifyTradingPairsExist();",
+              "err": {},
+              "uuid": "6122a7f9-0a45-4498-b1fd-483e90bebbdb",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display trading pairs for Losers",
+              "fullTitle": "Explore Market should display trading pairs for Losers",
+              "timedOut": null,
+              "duration": 2229,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.selectMarketCategory(category);\nexplorePage.verifyTradingPairsExist();",
+              "err": {},
+              "uuid": "aad0a1d6-4c9b-4557-83cc-f63aeef41f0f",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display the expected data fields for a trading pair",
+              "fullTitle": "Explore Market should display the expected data fields for a trading pair",
+              "timedOut": null,
+              "duration": 1978,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.verifyTradingPairStructure();",
+              "err": {},
+              "uuid": "1392b0dc-42f6-4cdf-a32f-8482b18bcf5e",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should navigate to BTC trading pair details page",
+              "fullTitle": "Explore Market should navigate to BTC trading pair details page",
+              "timedOut": null,
+              "duration": 2803,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "explorePage.clickTradingPair('BTC');\nexplorePage.verifyTradingPairDetailsPage('BTC');",
+              "err": {},
+              "uuid": "57fa88c0-32ac-43a9-9cab-732f5b145151",
+              "parentUUID": "3f874e1f-df95-4bea-859f-c5017ae663d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ffc1960c-ea6f-474b-bf1c-c6b203df0abe",
+            "89a6f9a0-f726-40ee-9b8e-66d249c07624",
+            "6122a7f9-0a45-4498-b1fd-483e90bebbdb",
+            "aad0a1d6-4c9b-4557-83cc-f63aeef41f0f",
+            "1392b0dc-42f6-4cdf-a32f-8482b18bcf5e",
+            "57fa88c0-32ac-43a9-9cab-732f5b145151"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12986,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

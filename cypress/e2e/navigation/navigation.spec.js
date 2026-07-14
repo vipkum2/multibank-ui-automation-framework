@@ -35,20 +35,6 @@ describe('Public Navigation', () => {
     })  
   });
 
-  it.skip('should have correct navigation links', () => {
-      marketingHomePage.verifyLoaded();
-      marketingHomePage.verifyNavigationLinks();    
-  });
-
-  it.skip('should navigate to Explore page', () => {
-    marketingHomePage.clickNavigationItem('Explore');
-    marketingHomePage.verifyCurrentPath('/en/explore');
-  });
-  it.skip('should navigate to Features page', () => {
-    marketingHomePage.clickNavigationItem('Features');
-    marketingHomePage.verifyCurrentPath('/en/features');
-  });
-
   it('should display desktop navigation at 1440x900', () => {
     cy.viewport(1440, 900);
     marketingHomePage.verifyLoaded();
@@ -59,7 +45,7 @@ describe('Public Navigation', () => {
     marketingHomePage.verifyHeroBanner();
     marketingHomePage.verifyHeroCallToActions();
   });
-  it.only('should expose a valid app download link', () => {
+  it('should expose a valid app download link', () => {
     marketingHomePage.verifyDownloadAppLink();
   });
 

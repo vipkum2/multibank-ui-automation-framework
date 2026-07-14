@@ -7,7 +7,7 @@ cypress/videos/
 cypress/downloads/
 
 # Reports
-reports/
+#reports/ 
 
 # Environment
 .env

@@ -1,9 +1,19 @@
 const { defineConfig } = require("cypress");
+const fs = require('fs');
+const path = require('path');
 
 module.exports = defineConfig({
   watchForFileChanges: false,
   video: false,
   screenshotOnRunFailure: true,
+  reporter: "mochawesome",
+
+  reporterOptions: {
+        reportDir: "reports/json",
+        overwrite: false,
+        html: false,
+        json: true
+    },
 
   e2e: {
     baseUrl: "https://trade.mb.io",
@@ -22,6 +32,20 @@ module.exports = defineConfig({
     },
 
     setupNodeEvents(on, config) {
+        const cleanDirectory = (dir) => {
+          fs.mkdirSync(dir, { recursive: true });
+          fs.readdirSync(dir).forEach(file => {
+            fs.rmSync(path.join(dir, file), {
+                recursive: true,
+                force: true
+            });
+        });
+    };
+
+    on("before:run", () => {
+        cleanDirectory("reports/html");
+        cleanDirectory("reports/json");
+    });
       return config;
     },
 

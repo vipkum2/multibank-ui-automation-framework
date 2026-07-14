@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-07-14T10:39:51.559Z",
+    "end": "2026-07-14T10:39:58.715Z",
+    "duration": 7156,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23fcc5ec-6e53-4d71-af87-8b81548afe31",
+      "title": "",
+      "fullFile": "cypress/e2e/authentication/login.spec.js",
+      "file": "cypress/e2e/authentication/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ea9dae4-536c-4713-a300-dc585c5bde85",
+          "title": "Authentication - Login Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to the public homepage via the application logo",
+              "fullTitle": "Authentication - Login Page should navigate to the public homepage via the application logo",
+              "timedOut": null,
+              "duration": 7118,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.verifyPageLoaded();\nloginPage.navigateToMarketingSite();\n//cypress supports cross-orgin with cy.origin()\ncy.origin(Cypress.env('marketingSiteUrl'), () => {\n  cy.url().should('include', 'mb.io');\n});",
+              "err": {},
+              "uuid": "fc1c9999-5038-479a-b257-4725f8b299ad",
+              "parentUUID": "5ea9dae4-536c-4713-a300-dc585c5bde85",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc1c9999-5038-479a-b257-4725f8b299ad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7118,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
