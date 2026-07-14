@@ -11,7 +11,7 @@ The framework validates core user journeys of the MultiBank marketing platform w
 ## Tech Stack
 
 - Cypress 15
-- JavaScript (ES6)
+- JavaScript
 - Node.js
 - Page Object Model (POM)
 - GitHub Actions
@@ -55,6 +55,12 @@ multibank-ui-automation-framework
 │   ├── support
 │   └── downloads
 │
+├── docs/
+│   ├── Task-2-QA-Strategy.md
+│   ├── Test-Plan.md
+│   ├── Release-Readiness-Checklist.md
+│   └── Risk-Matrix.md
+|
 ├── reports
 │   ├── html
 │   └── json
@@ -253,6 +259,20 @@ A successful workflow execution is available in the repository's **Actions** tab
 
 ---
 
+## Additional Documentation : Task 2
+
+The repository also includes supporting QA documentation for **Task 2** under the `docs/` directory.
+
+| Document | Description |
+|----------|-------------|
+| `Task-2-QA-Strategy.md` | Written responses covering the QA strategy and testing approach |
+| `Test-Plan.md` | Overall testing scope, objectives, and execution strategy |
+| `Release-Readiness-Checklist.md` | Checklist used to assess release readiness |
+| `Risk-Matrix.md` | Risk assessment with probability, impact, and mitigation |
+
+---
+
 ## Author
 
 **Vipin Kumar**
+I used AI assistance for brainstorming, code review, and documentation. All implementation decisions, validation, and final review were performed by me.
