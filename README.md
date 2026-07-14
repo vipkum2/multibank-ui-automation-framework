@@ -171,7 +171,7 @@ npm run test:firefox
 ## Test Reports
 
 HTML and JSON execution reports are generated under:
-
+One sample HTTP report: `reports/html/index.html`
 ```text
 reports/
 ├── html/
@@ -213,4 +213,3 @@ reports/
 
 **Vipin Kumar**
 
-Senior QA Automation Engineer
