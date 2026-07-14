@@ -1,6 +1,23 @@
 const SELECTORS = Object.freeze({
     navigation: 'nav[aria-label="Main"]',
-    navigationLinks: 'nav[aria-label="Main"] a'
+    navigationLinks: 'nav[aria-label="Main"] a',
+    downloadAppButton: '[data-button-type="download"]',
+    openAccountButton: 'a[href*="register"]'
+});
+
+const HERO_CONTENT = Object.freeze({
+    heading: 'Crypto for everyone',
+    description: 'Simple, secure and speedy.'
+});
+const HERO_ACTIONS = Object.freeze({
+    download: {
+        text: 'Download the app',
+        href: 'go.link'
+    },
+    openAccount: {
+        text: 'Open an account',
+        href: 'trade.mb.io/register'
+    }
 });
 
 const EXPECTED_NAV_ITEMS = Object.freeze([
@@ -74,6 +91,53 @@ class MarketingHomePage {
     verifyCurrentPath(expectedPath) {
       cy.location('pathname')
         .should('eq', expectedPath);
+  }
+
+  verifyHeroBanner() {
+    cy.contains('h3', HERO_CONTENT.heading)
+      .should('be.visible');
+
+    cy.contains('p', HERO_CONTENT.description)
+      .should('be.visible');
+
+  }
+
+  verifyHeroCallToActions() {
+    cy.get(SELECTORS.downloadAppButton)
+      .should('contain.text', HERO_ACTIONS.download.text)
+      .and('have.attr', 'href')
+      .and('include', HERO_ACTIONS.download.href);
+
+    cy.get(SELECTORS.openAccountButton)
+      .should('contain.text', HERO_ACTIONS.openAccount.text)
+      .and('have.attr', 'href')
+      .and('include', HERO_ACTIONS.openAccount.href);
+  }
+  verifyDownloadAppLink() {
+    cy.get(SELECTORS.downloadAppButton)
+      .should('have.attr', 'target', '_blank')
+      .and('have.attr', 'rel')
+      .and('include', 'noopener');
+
+    cy.get(SELECTORS.downloadAppButton)
+      .should('have.attr', 'href')
+      .then(href => {
+          expect(href).to.contain('go.link');
+        });
+  }
+  verifyMobileLayout() {
+    cy.get('header')
+        .should('be.visible');
+    cy.contains('Crypto for everyone')
+        .should('be.visible');
+    cy.contains('Download the app')
+        .should('be.visible');
+    cy.contains('Open an account')
+        .should('be.visible');
+  }
+  verifyMobileMenu() {
+    cy.get('button[aria-label*="menu"]')
+        .should('be.visible');
   }
 }
 

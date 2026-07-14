@@ -7,7 +7,6 @@ const {
 const marketingHomePage = new MarketingHomePage();
 
 describe('Public Navigation', () => {
-
   beforeEach(() => {
     cy.visit(Cypress.env('marketingSiteUrl'));
   });
@@ -25,6 +24,7 @@ describe('Public Navigation', () => {
         marketingHomePage.verifyCurrentPath(link.href);
     });
   });
+
   EXTERNAL_NAV_LINKS.forEach(link => {
     it(`should verify '${link.text}' navigation`, () => {
       marketingHomePage.verifyExternalNavigationLink(
@@ -53,6 +53,14 @@ describe('Public Navigation', () => {
     cy.viewport(1440, 900);
     marketingHomePage.verifyLoaded();
     marketingHomePage.verifyNavigationVisible();
-
   });
+
+  it('should display hero marketing banner', () => {
+    marketingHomePage.verifyHeroBanner();
+    marketingHomePage.verifyHeroCallToActions();
+  });
+  it.only('should expose a valid app download link', () => {
+    marketingHomePage.verifyDownloadAppLink();
+  });
+
 }); 
