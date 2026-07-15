@@ -263,9 +263,13 @@ Sample successful workflow executions are available under the repository's **Act
 
 ## Assumptions
 
-- The target environment is publicly accessible during execution.
-- External application store links are validated for successful navigation.
+- The URL (`https://trade.mb.io`) provided in assignement redirected to the login page, I made a smoke test for it to redirect (`https://mb.io/`) via clicking on logo icon.
+- Remainng test is directly test with `https://mb.io/`. As For this product I do not want to use cross origin for all specs.
+- Trading data is validated on the Explore page.
+- External application store links(like click on $MBG redirect to `token.multibankgroup.com`) are validated for successful navigation.
+- Why MultiBank is located via Company navigation → /company
 - Test execution does not require authenticated trading functionality.
+- The public marketing website may intermittently generate known React client-side exceptions. These are treated as known application issues and are filtered to avoid false test failures.
 
 ---
 

@@ -31,6 +31,7 @@ Ensure all critical quality gates have been successfully completed before approv
 
 ### Summary
 
+- For this assessment, the framework ignores a small set of known React client-side exceptions originating from the public marketing website. This prevents false failures while preserving validation of the intended user journeys.
 - All planned automated test suites have completed successfully.
 - No Critical or High severity defects remain open.
 - CI pipeline executed successfully.

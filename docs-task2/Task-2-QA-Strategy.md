@@ -12,12 +12,12 @@ My first priority would be understanding the product before writing a single tes
 
 I would begin by pritorizing below:
 
-- Understanding the business-critical user journeys. Who is the end user and how user is going to our product ?
+- Understanding the business-critical user journeys. Who is the end user and how user is going to our product
 - Identifying high-risk features involving user funds.
 - Reviewing product requirements and available documentation.
 - Talk with Product Managers and Developers to understand expected behaviour.
 - Installing the app on both iOS and Android.
-- HIT and TRY: Exploring the app manually to identify obvious issues.
+- `HIT and TRY`: Exploring the app manually by installing on real devices to identify obvious issues.
 - Creating a risk-based testing strategy.
 
 Since release is only two weeks away, I would focus on priotizing validating the highest business risks rather than attempting complete coverage.
