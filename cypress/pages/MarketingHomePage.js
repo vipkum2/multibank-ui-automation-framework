@@ -30,24 +30,24 @@ const EXPECTED_NAV_ITEMS = Object.freeze([
 ]);
 
 const INTERNAL_NAV_LINKS = Object.freeze([
-    { text: 'Explore', href: '/en/explore' },
-    { text: 'Features', href: '/en/features' },
-    { text: 'OTC Desk', href: '/en/features/otc-desk' },
-    { text: 'Company', href: '/en/company' },
-    { text: 'Support', href: '/en/support' }
+    { text: 'Explore', href: '/explore' },
+    { text: 'Features', href: '/features' },
+    { text: 'OTC Desk', href: '/features/otc-desk' },
+    { text: 'Company', href: '/company' },
+    { text: 'Support', href: '/support' }
 ]);
 
 const EXTERNAL_NAV_LINKS = Object.freeze([
     {
         text: '$MBG',
-        href: 'https://token.multibankgroup.com/en',
+        href: 'https://token.multibankgroup.com',
         target: '_blank'
     }
 ]);
 
 class MarketingHomePage {
     verifyLoaded() {
-        cy.url().should('include', 'mb.io/en');
+        cy.url().should('include', 'mb.io');
     }
     verifyNavigationVisible() {
         cy.get(SELECTORS.navigation)
@@ -84,13 +84,14 @@ class MarketingHomePage {
       cy.get(SELECTORS.navigation)
         .contains('a', linkText)
         .should('be.visible')
-        .should('have.attr', 'href', expectedHref)
-        .and('have.attr', 'target', expectedTarget);
+        .should('have.attr', 'target', expectedTarget)
+        .invoke('attr', 'href')
+        .should('include', expectedHref);
 
   }
     verifyCurrentPath(expectedPath) {
       cy.location('pathname')
-        .should('eq', expectedPath);
+        .should('include', expectedPath);
   }
 
   verifyHeroBanner() {

@@ -270,6 +270,7 @@ Sample successful workflow executions are available under the repository's **Act
 - Why MultiBank is located via Company navigation → /company
 - Test execution does not require authenticated trading functionality.
 - The public marketing website may intermittently generate known React client-side exceptions. These are treated as known application issues and are filtered to avoid false test failures.
+- URL assertions avoid unnecessary hard-coding of locale-specific paths (e.g., `/en`) where practical, making the tests more resilient to regional deployments.
 
 ---
 
